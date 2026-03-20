@@ -1,11 +1,40 @@
- public class main {
+public class main {
+    public static void main(String[] args) {
 
-     public static void main(String[] args) {
-         Elevador E = new Elevador();
-         E.AndarAtual = 0;
-         E.TotalAndares = 10;
-         E.portaAberta = false;
+        Elevador elevador = new Elevador(0, 5);
 
-         E.opcoes();
-     }
- }
+        System.out.println("=== Teste Elevador ===\n");
+
+        elevador.exibirAndar();
+
+        elevador.abrirPorta();
+        elevador.subir();
+
+        elevador.fecharPorta();
+        elevador.subir();
+        elevador.subir();
+        elevador.subir();
+
+        elevador.exibirAndar();
+
+        elevador.descer();
+
+        if (elevador.portaEstaAberta()) {
+            System.out.println("Porta aberta");
+        } else {
+            System.out.println("Porta fechada");
+        }
+
+        elevador.subir();
+        elevador.subir();
+        elevador.subir();
+        elevador.subir();
+
+        elevador.descer();
+        elevador.descer();
+        elevador.descer();
+        elevador.descer();
+        elevador.descer();
+        elevador.descer();
+    }
+}
